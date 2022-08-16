@@ -7,8 +7,9 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
+  margin: 40px 0 5px 0;
 }
 
 h1 span {
@@ -18,29 +19,65 @@ h1 span {
 .content-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-.main-container {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 22px 35px 35px 35px;
   gap: 30px;
 }
 
+.main-container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 0 20px 20px 20px;
+}
+
 .settings-container {
+  font-size: 20px;
   width: 800px;
-  height: 800px;
+  height: 625px;
+  margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 36px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 600px;
+  height: 30px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 5;		
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgb(62, 2, 141);
+  cursor: pointer;
+}   
+
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 35px;
+  background: rgb(62, 2, 141);
+  cursor: pointer;
 }
 
 .preview-container {
-  width: 1000px;
-  height: 700px;
+  width: 900px;
+  height: 535px;
   border: solid;
   border-color: black;
   margin:auto;
@@ -51,8 +88,8 @@ h1 span {
 }
 
 #preview {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border: solid;
   border-color: black;
 }
@@ -61,23 +98,33 @@ h1 span {
   margin: auto;
   font-family: "Fira Code";
   font-weight: 400;
-  font-size: 20px;
-  width: 775px;
-  height: 250px;
+  font-size: 18px;
+  width: 900px;
+  height: 100%;
   border: solid;
   border-color: black;
   background-color: #0d1623;
   color: white;
 }
 
-#btn-copy {
-  font-family: "Rubik";
-  font-weight: 400;
-  font-size: 17px;
-  position: relative;
-  top: 10px;
-  left: 665px;
+#code {
+  left: 2000px;
 }
+
+
+#btn-copy {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  top: 8px;
+  left: 90%;
+  padding: 1px 4px 1px 4px;
+}
+
 
 #glass {
   color: rgb(240, 240, 68);
@@ -97,10 +144,6 @@ h1 span {
 
 .colorsetting {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 15px;
 }
-
-
-          
-
-          

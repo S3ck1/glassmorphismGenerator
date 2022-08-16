@@ -22,17 +22,17 @@
         <div class="colorsetting">
           <span>
             <span class="input-title">Color: </span>
-            <span class="input-value"></span>
+            <br>
           </span>
           <div class="color-picker"></div>
         </div>
         <div class="slidesetting">
           <span class="input-title">Size: </span>
-          <span class="input-value"></span><br />
+          <br>
           <input
             type="range"
             min="1"
-            max="700"
+            max="500"
             value="50"
             class="slider"
             id="size"
@@ -40,7 +40,7 @@
         </div>
         <div class="slidesetting">
           <span class="input-title">Border radius: </span>
-          <span class="input-value"></span><br />
+          <br>
           <input
             type="range"
             min="1"
@@ -52,7 +52,7 @@
         </div>
         <div class="slidesetting">
           <span class="input-title">Blur: </span>
-          <span class="input-value"></span><br />
+          <br>
           <input
             type="range"
             min="1"
@@ -64,7 +64,7 @@
         </div>
         <div class="slidesetting">
           <span class="input-title">Contrast: </span>
-          <span class="input-value"></span><br />
+          <br>
           <input
             type="range"
             min="1"
@@ -76,7 +76,7 @@
         </div>
         <div class="slidesetting">
           <span class="input-title">Saturate: </span>
-          <span class="input-value"></span><br />
+          <br>
           <input
             type="range"
             min="1"
@@ -92,20 +92,21 @@
           <div id="preview"></div>
         </div>
         <div class="code-container">
-          <button id = "btn-copy" onclick="copyText()">Copy code</button>
+          <button id = "btn-copy" onclick="copyText()">Copy</button>
           <span id="code">
           <br>
           <br>
-          <span id ="glass">.glass</span>&nbsp;{<br>
-          <span class="codeline-property">&nbsp;&nbsp;background-color</span>: <span class="value-highlight">rgba</span>(<span class="codeline-backgroundColor value">0, 0, 0, 0.5</span>);<br>
-          <span class="codeline-property">&nbsp;&nbsp;width</span>: <span class="codeline-width value">300px</span>;<br>
-          <span class="codeline-property">&nbsp;&nbsp;height</span>: <span class="codeline-heigth value">300px</span>;<br>
-          <span class="codeline-property">&nbsp;&nbsp;border-radius</span>: <span class="codeline-borderRadius value">25%</span>;<br>
-          <span class="codeline-property">&nbsp;&nbsp;backdrop-filter</span>: 
+          <span id ="glass">&nbsp;.glass</span>&nbsp;{<br>
+          <span class="codeline-property">&nbsp;&nbsp; background-color</span>: <span class="value-highlight">rgba</span>(<span class="codeline-backgroundColor value">0, 0, 0, 0.5</span>);<br>
+          <span class="codeline-property">&nbsp;&nbsp; width</span>: <span class="codeline-width value">300px</span>;<br>
+          <span class="codeline-property">&nbsp;&nbsp; height</span>: <span class="codeline-heigth value">300px</span>;<br>
+          <span class="codeline-property">&nbsp;&nbsp; border-radius</span>: <span class="codeline-borderRadius value">25%</span>;<br>
+          <span class="codeline-property">&nbsp;&nbsp; backdrop-filter</span>: 
           <span class="codeline-backdrop"><span class="value-highlight">blur</span>(<span class="codeline-blur value">50px</span>)
                                           <span class="value-highlight">contrast</span>(<span class="codeline-contrast value">50%</span>)
-                                          <span class="value-highlight">saturate</span>(<span class="codeline-saturate value">50%</span>);<br>}
+                                          <span class="value-highlight">saturate</span>(<span class="codeline-saturate value">50%</span>);<br>&nbsp;}
         </span>
+        <br><br>
       </span>
         </div>
       </div>
@@ -118,14 +119,14 @@
       let txtArea = document.getElementById("code");
 
       //removes all invisible characters
-      let txt = txtArea.textContent.replace('\u{00A0}', ' ').replaceAll('\u{00A0}\u{00A0}', ' ');
+      let txt = txtArea.textContent.replaceAll('\u{00A0}', ' ').replaceAll('\u{00A0}\u{00A0}', ' ');
 
       //some format corrections
-      txt = txt.replace(" blur", "    blur");
-      txt = txt.replace(`${" ".repeat(29)}contrast`, "contrast");
-      txt = txt.replace(`${" ".repeat(29)}saturate`, "saturate");
+      txt = txt.replace(" blur", "      blur");
+      txt = txt.replace(`${" ".repeat(27)}contrast`, "contrast");
+      txt = txt.replace(`${" ".repeat(27)}saturate`, "saturate");
       txt = txt.replace("}", "\n}");
-      
+
       navigator.clipboard.writeText(txt);
 
       alert("The code has been copied :D");
