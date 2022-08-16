@@ -2,13 +2,13 @@ import { pickr } from "./pickr.js";
 
 let slideSettings = document.querySelectorAll(".slidesetting");
 let preview = document.querySelector("#preview");
-let codeContainer = document.querySelector(".code-container");
 setDefaultSettings(preview);
 
 //A listener for color picker
 pickr.on("change", (color) => {
-  preview.style["backgroundColor"] = color.toRGBA().toString(2);
-  document.querySelector(".codeline-backgroundColor").textContent = color.toRGBA().toString(2);
+  let colorRGBA = color.toRGBA().toString(2);
+  preview.style["backgroundColor"] = colorRGBA;
+  document.querySelector(".codeline-backgroundColor").textContent = colorRGBA.substring(5, colorRGBA.length-1) 
 });
 
 //A listener for all sliders
@@ -20,15 +20,15 @@ slideSettings.forEach((element) => {
     switch (property) {
       case "blur":
         preview.style.backdropFilter = `blur(${value}px)`;
-        document.querySelector(".codeline-blur").textContent = `blur(${value}px)`;
+        document.querySelector(".codeline-blur").textContent = `${value}px`;
         break;
         case "contrast":
         preview.style.backdropFilter = `contrast(${value}%)`;
-        document.querySelector(".codeline-contrast").textContent = `contrast(${value}%)`;
+        document.querySelector(".codeline-contrast").textContent = `${value}%`;
         break;
         case "saturate":
         preview.style.backdropFilter = `saturate(${value}%)`;
-        document.querySelector(".codeline-saturate").textContent = `saturate(${value}%)`;
+        document.querySelector(".codeline-saturate").textContent = `${value}%`;
         break;
         case "border-radius":
         preview.style.borderRadius = `${value}%`;
@@ -58,3 +58,5 @@ function setDefaultSettings(container) {
   container.style.height = "300px";
 }
 console.log(preview.style);
+
+console.log(document.getElementById("code").textContent);

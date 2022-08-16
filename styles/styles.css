@@ -15,20 +15,27 @@ h1 span {
   font-size: 30px;
 }
 
-
-.main-container {
-  padding: 30px;
-  margin: auto;
+.content-container {
   display: flex;
   flex-direction: row;
-  justify-content:center;
-  gap: 60px;
+  justify-content: center;
+  align-items: center;
 }
-
-.settings-container {
+.main-container {
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 30px;
+}
+
+.settings-container {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .preview-container {
@@ -51,10 +58,11 @@ h1 span {
 }
 
 .code-container {
+  margin: auto;
   font-family: "Fira Code";
   font-weight: 400;
   font-size: 20px;
-  width: 750px;
+  width: 775px;
   height: 250px;
   border: solid;
   border-color: black;
@@ -62,21 +70,37 @@ h1 span {
   color: white;
 }
 
+#btn-copy {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 17px;
+  position: relative;
+  top: 10px;
+  left: 665px;
+}
+
 #glass {
-  color: rgb(220, 220, 63);
+  color: rgb(240, 240, 68);
 }
 
 .codeline-property{
-  color: rgb(35, 167, 129);
+  color: rgb(42, 198, 154);
 }
 
 .value {
-  color: rgb(239, 107, 107);
+  color: rgb(255, 104, 104);
+}
+
+.value-highlight {
+  color: rgb(255, 57, 57);
 }
 
 .colorsetting {
   display: flex;
   justify-content: flex-start;
-  gap: 25%;
 }
 
+
+          
+
+          

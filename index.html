@@ -17,7 +17,7 @@
   </head>
   <body>
     <h1>Glassmorphism Generator <span>by S3ck1</span></h1>
-    <div class="main-container">
+    <div class="content-container">
       <div class="settings-container">
         <div class="colorsetting">
           <span>
@@ -87,26 +87,49 @@
           />
         </div>
       </div>
-      <div class="code-container">
-        <br>
-        <br>
-        <span id ="glass">.glass</span>&nbsp;{<br> 
-        <span class="codeline-property">&nbsp;&nbsp;background-color</span>: <span class="codeline-backgroundColor value">rgba(0, 0, 0, 0.5)</span>;<br>
-        <span class="codeline-property">&nbsp;&nbsp;width</span>: <span class="codeline-width value">300px</span>;<br>
-        <span class="codeline-property">&nbsp;&nbsp;height</span>: <span class="codeline-heigth value">300px</span>;<br>
-        <span class="codeline-property">&nbsp;&nbsp;border-radius</span>: <span class="codeline-borderRadius value">25%</span>;<br>
-        <span class="codeline-property">&nbsp;&nbsp;backdrop-filter</span>: 
-        <span class="codeline-backdrop"><span class="codeline-blur value">blur(50px)</span>
-                                        <span class="codeline-contrast value">contrast(50%)</span>
-                                        <span class="codeline-saturate value">saturate(50%)</span>;<br>}
+      <div class="main-container">
+        <div class="preview-container">
+          <div id="preview"></div>
+        </div>
+        <div class="code-container">
+          <button id = "btn-copy" onclick="copyText()">Copy code</button>
+          <span id="code">
+          <br>
+          <br>
+          <span id ="glass">.glass</span>&nbsp;{<br>
+          <span class="codeline-property">&nbsp;&nbsp;background-color</span>: <span class="value-highlight">rgba</span>(<span class="codeline-backgroundColor value">0, 0, 0, 0.5</span>);<br>
+          <span class="codeline-property">&nbsp;&nbsp;width</span>: <span class="codeline-width value">300px</span>;<br>
+          <span class="codeline-property">&nbsp;&nbsp;height</span>: <span class="codeline-heigth value">300px</span>;<br>
+          <span class="codeline-property">&nbsp;&nbsp;border-radius</span>: <span class="codeline-borderRadius value">25%</span>;<br>
+          <span class="codeline-property">&nbsp;&nbsp;backdrop-filter</span>: 
+          <span class="codeline-backdrop"><span class="value-highlight">blur</span>(<span class="codeline-blur value">50px</span>)
+                                          <span class="value-highlight">contrast</span>(<span class="codeline-contrast value">50%</span>)
+                                          <span class="value-highlight">saturate</span>(<span class="codeline-saturate value">50%</span>);<br>}
+        </span>
       </span>
+        </div>
       </div>
-    </div>
-    <div class="preview-container">
-      <div id="preview"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
     <script type="module" src="pickr.js"></script>
     <script type="module" src="index.js"></script>
+    <script>
+      function copyText() {
+      let txtArea = document.getElementById("code");
+
+      //removes all invisible characters
+      let txt = txtArea.textContent.replace('\u{00A0}', ' ').replaceAll('\u{00A0}\u{00A0}', ' ');
+
+      //some format corrections
+      txt = txt.replace(" blur", "    blur");
+      txt = txt.replace(`${" ".repeat(29)}contrast`, "contrast");
+      txt = txt.replace(`${" ".repeat(29)}saturate`, "saturate");
+      txt = txt.replace("}", "\n}");
+      
+      navigator.clipboard.writeText(txt);
+
+      alert("The code has been copied :D");
+      }
+    </script>
   </body>
 </html>
