@@ -141,7 +141,10 @@
       function changeBackground(){
       let url = prompt("Please enter a background URL: ", );
       let validURL = /^(ftp|http|https):\/\/[^ "]+$/.test(url);
-      if (validURL) {
+      if (url === "") {
+        
+      }
+      else if (validURL) {
         document.querySelector(".preview-container").style.background = "url("+ url + ")";
       } else {
         window.alert("Insert a valid URL!");
