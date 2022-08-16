@@ -47,6 +47,7 @@ h1 span {
 }
 
 .slider {
+  -webkit-appearance: none;
   width: 600px;
   height: 30px;
   background: #d3d3d3;
@@ -61,6 +62,7 @@ h1 span {
 }
 
 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
   appearance: none;
   background: rgb(62, 2, 141);
   cursor: pointer;
