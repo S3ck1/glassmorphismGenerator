@@ -29,7 +29,7 @@
           <input
             type="range"
             min="1"
-            max="100"
+            max="700"
             value="50"
             class="slider"
             id="size"
@@ -41,7 +41,7 @@
           <input
             type="range"
             min="1"
-            max="100"
+            max="50"
             value="50"
             class="slider"
             id="border-radius"
@@ -84,13 +84,22 @@
           />
         </div>
       </div>
-      <div class="preview-container">
-        <div id="preview"></div>
+      <div class="code-container">
+        <span class="codeline-property">background-color: </span><span class="codeline-backgroundColor">rgba(0, 0, 0, 0.5)</span><br>
+        <span class="codeline-property">width: </span><span class="codeline-width">300px;</span><br>
+        <span class="codeline-property">heigth: </span><span class="codeline-heigth">300px</span><br>
+        <span class="codeline-property">border-radius: </span><span class="codeline-borderRadius">25%</span><br>
+        <span class="codeline-property">backdrop-filter: </span>
+        <span class="codeline-backdrop"><span class="codeline-blur">blur(50px)</span>
+                                        <span class="codeline-contrast">contrast(50%)</span>
+                                        <span class="codeline-saturate">saturate(50%)</span><br>
       </div>
+    </div>
+    <div class="preview-container">
+      <div id="preview"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
     <script type="module" src="pickr.js"></script>
-    <script type="module" src="settings.js"></script>
     <script type="module" src="index.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@ const pickr = Pickr.create({
   el: '.color-picker',
   theme: 'classic', // or 'monolith', or 'nano'
   comparison: false,
+  default: "rgba(0, 0, 0, 0.5)",
   swatches: [
   ],
 
@@ -12,6 +13,7 @@ const pickr = Pickr.create({
       preview: true,
       opacity: true,
       hue: true,
+      
 
       // Input / output Options
       interaction: {
