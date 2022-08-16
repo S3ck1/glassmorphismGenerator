@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Glassmorphism Generator</title>
+  </head>
+  <body>
+    <h1>Glassmorphism Generator <span>by S3ck1</span></h1>
+    <div class="main-container">
+      <div class="settings-container">
+        <div class="colorsetting">
+          <span>
+            <span class="input-title">Color: </span>
+            <span class="input-value"></span>
+          </span>
+          <div class="color-picker"></div>
+        </div>
+        <div class="slidesetting">
+          <span class="input-title">Size: </span>
+          <span class="input-value"></span><br />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="size"
+          />
+        </div>
+        <div class="slidesetting">
+          <span class="input-title">Border radius: </span>
+          <span class="input-value"></span><br />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="border-radius"
+          />
+        </div>
+        <div class="slidesetting">
+          <span class="input-title">Blur: </span>
+          <span class="input-value"></span><br />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="blur"
+          />
+        </div>
+        <div class="slidesetting">
+          <span class="input-title">Contrast: </span>
+          <span class="input-value"></span><br />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="contrast"
+          />
+        </div>
+        <div class="slidesetting">
+          <span class="input-title">Saturate: </span>
+          <span class="input-value"></span><br />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="saturate"
+          />
+        </div>
+      </div>
+      <div class="preview-container">
+        <div id="preview"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
+    <script type="module" src="pickr.js"></script>
+    <script type="module" src="settings.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
