@@ -1,7 +1,20 @@
 
+
+body {
+  font-family: "Rubik";
+  font-weight: 400;
+}
+
 h1 {
   text-align: center;
+  font-size: 50px;
+  font-weight: 500;
 }
+
+h1 span {
+  font-size: 30px;
+}
+
 
 .main-container {
   padding: 30px;
@@ -38,12 +51,27 @@ h1 {
 }
 
 .code-container {
-  width: 600px;
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-size: 20px;
+  width: 750px;
   height: 250px;
   border: solid;
   border-color: black;
   background-color: #0d1623;
   color: white;
+}
+
+#glass {
+  color: rgb(220, 220, 63);
+}
+
+.codeline-property{
+  color: rgb(35, 167, 129);
+}
+
+.value {
+  color: rgb(239, 107, 107);
 }
 
 .colorsetting {

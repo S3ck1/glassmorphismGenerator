@@ -23,8 +23,8 @@ const pickr = Pickr.create({
           hsva: true,
           cmyk: true,
           input: true,
-          clear: true,
-          save: true
+          clear: false,
+          save: false
       }
   }
 });
