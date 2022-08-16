@@ -75,6 +75,12 @@ h1 span {
   cursor: pointer;
 }
 
+.url-container {
+  position: absolute;
+  top: 860px;
+  left: 150px;
+}
+
 .preview-container {
   width: 900px;
   height: 535px;
@@ -111,14 +117,16 @@ h1 span {
   left: 2000px;
 }
 
-
-#btn-copy {
-  background-color: white;
-  border: none;
+button {
   cursor: pointer;
   font-family: sans-serif;
   font-weight: 500;
   font-size: 18px;
+}
+
+#btn-copy {
+  background-color: white;
+  border-radius: 10%;
   position: relative;
   top: 8px;
   left: 90%;
@@ -146,4 +154,12 @@ h1 span {
   display: flex;
   justify-content: space-between;
   gap: 15px;
+}
+
+input {
+  font-family:Arial;
+}
+
+#btn-background {
+  font-size: 16px;
 }

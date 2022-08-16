@@ -111,6 +111,9 @@
         </div>
       </div>
     </div>
+    <div class = "url-container">
+      <button onclick="changeBackground()" id="btn-background">Change background</button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
     <script type="module" src="pickr.js"></script>
     <script type="module" src="index.js"></script>
@@ -129,7 +132,20 @@
 
       navigator.clipboard.writeText(txt);
 
-      alert("The code has been copied :D");
+      let copyBtn = document.querySelector("#btn-copy");
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => copyBtn.textContent = "Copy", 1500);
+      }
+    </script>
+    <script>
+      function changeBackground(){
+      let url = prompt("Please enter a background URL: ", );
+      let validURL = /^(ftp|http|https):\/\/[^ "]+$/.test(url);
+      if (validURL) {
+        document.querySelector(".preview-container").style.background = "url("+ url + ")";
+      } else {
+        window.alert("Insert a valid URL!");
+      }
       }
     </script>
   </body>
