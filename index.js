@@ -27,17 +27,14 @@ slideSettings.forEach((element) => {
       case "blur":
         setBackdropProperty(property, value);
         document.querySelector(".codeline-blur").textContent = `${value}px`;
-        console.log(preview.style.backdropFilter);
         break;
       case "contrast":
         setBackdropProperty(property, value);
         document.querySelector(".codeline-contrast").textContent = `${value}%`;
-        console.log(preview.style.backdropFilter);
         break;
       case "saturate":
         setBackdropProperty(property, value);
         document.querySelector(".codeline-saturate").textContent = `${value}%`;
-        console.log(preview.style.backdropFilter);
         break;
       case "border-radius":
         preview.style.borderRadius = `${value}%`;
