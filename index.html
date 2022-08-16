@@ -141,7 +141,7 @@
       function changeBackground(){
       let url = prompt("Please enter a background URL: ", );
       let validURL = /^(ftp|http|https):\/\/[^ "]+$/.test(url);
-      if (url === "") {
+      if (url === "" || url === null) {
         
       }
       else if (validURL) {
